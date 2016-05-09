@@ -6,7 +6,14 @@ Setup Pogoplug to receive and play audio stream over Bluetooth from any mobile d
 
 ##Assumption
 
-Your login id is 'blue'
+* Your login id is 'blue'
+* Audio USB, Bluetooth USB shoud be detected by system
+
+```
+lsusb
+Bus 001 Device 004: ID 0d8c:0008 C-Media Electronics, Inc. 
+Bus 001 Device 003: ID 1131:1001 Integrated System Solution Corp. KY-BT100 Bluetooth Adapter
+```
 
 ##Audio USB dongle
 
