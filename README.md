@@ -13,16 +13,52 @@ Your login id is 'blue'
 ###As root
 
 ```
-pacman -S alsa-utils alsa-lib
+pacman -Syu alsa-utils alsa-lib
 gpasswd -a blue audio
 ```
 
-###As you
+###As blue
 
 ```
-<Log out, then log back in again>
+<Log out, then log back in again after gpasswd command>
 alsamixer # set the volume to max
 speaker-test # You should hear sound!
+```
+
+###As root
+
+```
+pacman -Syu pulseaudio pulseaudio-alsa pulseaudio-bluetooth
+useradd -m pulse
+gpasswd -a pulse audio
+```
+
+Create system file for pulseaudio
+
+```
+/etc/systemd/system/pulseaudio.service
+[Unit]
+Description=pulseaudio service
+Requires=bluetooth.target
+
+[Service]
+User=pulse
+ExecStart=/usr/bin/pulseaudio -v
+Restart=always
+LimitRTPRIO=99
+LimitNICE=40
+LimitMEMLOCK=40000
+
+[Install]
+WantedBy=multi-user.target
+```
+
+Install system file
+
+```
+systemctl enable pulseaudio
+systemctl start pulseaudio
+systemctl status pulseaudio
 ```
 
 ##Bluetooth USB dongle
