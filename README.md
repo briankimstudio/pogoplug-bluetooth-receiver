@@ -20,24 +20,24 @@ Bus 001 Device 003: ID 1131:1001 Integrated System Solution Corp. KY-BT100 Bluet
 ####As root
 
 ```
-pacman -Syu alsa-utils alsa-lib
-gpasswd -a blue audio
+# pacman -Syu alsa-utils alsa-lib
+# gpasswd -a blue audio
 ```
 
 ####As blue
 
 ```
 <Log out, then log back in again after gpasswd command>
-alsamixer # set the volume to max
-speaker-test # You should hear sound!
+$ alsamixer # set the volume to max
+$ speaker-test # You should hear sound!
 ```
 
 ####As root
 
 ```
-pacman -Syu pulseaudio pulseaudio-alsa pulseaudio-bluetooth
-useradd -m pulse
-gpasswd -a pulse audio
+# pacman -Syu pulseaudio pulseaudio-alsa pulseaudio-bluetooth
+# useradd -m pulse
+# gpasswd -a pulse audio
 ```
 
 Create system file for pulseaudio
@@ -63,9 +63,9 @@ WantedBy=multi-user.target
 Install system file
 
 ```
-systemctl enable pulseaudio
-systemctl start pulseaudio
-systemctl status pulseaudio
+# systemctl enable pulseaudio
+# systemctl start pulseaudio
+# systemctl status pulseaudio
 ```
 
 ##Bluetooth USB dongle
@@ -73,23 +73,26 @@ systemctl status pulseaudio
 ####As root
 
 ```
-pacman -Syu bluez bluez-libs bluez-utils
-gpasswd -a blue lp
-gpasswd -a pulse lp
-systemctl enable bluetooth
-systemctl start bluetooth
-hciconfig hci0 up
-hciconfig hci0 class 0x200420
+# pacman -Syu bluez bluez-libs bluez-utils
+# gpasswd -a blue lp
+# gpasswd -a pulse lp
+# systemctl enable bluetooth
+# systemctl start bluetooth
+# hciconfig hci0 up
+# hciconfig hci0 class 0x200420
 ```
+
+* Members in lp group can access bluetooth according to /etc/dbus-1/system.d/bluetooth.conf
 
 ###Pairing
 
 ```
-agent KeyboardOnly
-default-agent
-discoverable on
-pairable on
-trust [dev]
+# bluetoothctl
+[bluetooth]# agent KeyboardOnly
+[bluetooth]# default-agent
+[bluetooth]# discoverable on
+[bluetooth]# pairable on
+[bluetooth]# trust [dev]
 ```
 
 ###Auto start Bluetooth USB on reboot
