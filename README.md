@@ -1,6 +1,6 @@
 #Pogoplug Bluetooth Speaker
 
-Setup Pogoplug to receive and play audio stream over Bluetooth from any mobile device. Galaxy S5 is used a s music source in this project
+Setup Pogoplug to receive and play audio stream over Bluetooth from device such as smartphone. Galaxy S5 is used a s music source in this project
 
 #Installation
 
