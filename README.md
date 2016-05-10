@@ -40,7 +40,7 @@ $ alsamixer # Set Master volume to max
 $ speaker-test -c 2 # Left and right speaker should make sound alternatively
 ```
 
-####[As root](#pulse-markdown-heading)
+####[As root](#pulse-in-markdown)
 
 ```
 # pacman -Syu pulseaudio pulseaudio-alsa pulseaudio-bluetooth
