@@ -1,6 +1,6 @@
 #Pogoplug Bluetooth Speaker
 
-Setup Pogoplug to receive and play audio stream over Bluetooth from device such as smartphone. Galaxy S5 is used a s music source in this project
+Setup Pogoplug to receive and play audio stream over Bluetooth from device such as smartphone. Galaxy S5 is used a s music source in this project.
 
 #Installation
 
@@ -28,8 +28,8 @@ Bus 001 Device 003: ID 1131:1001 Integrated System Solution Corp. KY-BT100 Bluet
 
 ```
 <Log out, then log back in again after gpasswd command>
-$ alsamixer # set the volume to max
-$ speaker-test # You should hear sound!
+$ alsamixer # Set Master volume to max
+$ speaker-test -c 2 # Left and right speaker should make sound alternatively
 ```
 
 ####As root
