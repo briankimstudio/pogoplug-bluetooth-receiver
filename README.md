@@ -44,11 +44,11 @@ $ speaker-test -c 2 # Left and right speaker should make sound alternatively
 
 ```
 # pacman -Syu pulseaudio pulseaudio-alsa pulseaudio-bluetooth
-# useradd -m pulse
+# useradd -m pulse # Important! pulseaudio daemon creates config files in 'pulse' home directiory
 # gpasswd -a pulse audio
 ```
 
-Create systemd service file for pulseaudio
+Create systemd service file(/etc/systemd/system/pulseaudio.service) for pulseaudio
 
 ```
 /etc/systemd/system/pulseaudio.service
@@ -65,14 +65,13 @@ Restart=always
 WantedBy=multi-user.target
 ```
 
-Install systemd service file
+Install systemd service file and enable it
 
 ```
 # systemctl enable pulseaudio
 # systemctl start pulseaudio
 # systemctl status pulseaudio # Make sure pulseaudio service is running without any error message
 ```
-
 
 ##Bluetooth USB dongle
 
