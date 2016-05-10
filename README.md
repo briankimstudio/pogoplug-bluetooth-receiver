@@ -52,9 +52,6 @@ Requires=bluetooth.target
 User=pulse
 ExecStart=/usr/bin/pulseaudio -v
 Restart=always
-LimitRTPRIO=99
-LimitNICE=40
-LimitMEMLOCK=40000
 
 [Install]
 WantedBy=multi-user.target
@@ -80,7 +77,6 @@ Install systemd service file
 # systemctl enable bluetooth
 # systemctl start bluetooth
 # hciconfig hci0 up
-# hciconfig hci0 class 0x200420
 ```
 
 * Members in lp group can access bluetooth according to /etc/dbus-1/system.d/bluetooth.conf
