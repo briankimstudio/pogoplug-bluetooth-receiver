@@ -110,6 +110,13 @@ Controller 00:11:67:12:34:56
 ACTION=="add", KERNEL=="hci0", RUN+="/usr/bin/hciconfig hci0 up"
 ```
 
+#Future works
+
+* How can CPU load of pulseaudio be lowered?. It is around 75% while playing streaming audio.
+ * high-priority = no, realtime-scheduling = no in /etc/pulse/daemon.conf didn't affect on load
+ 
+![High CPU LOAD](/cpu-load.png?raw=true "High CPU Load")
+
 #References
 
 * https://wiki.archlinux.org/index.php/Bluetooth
