@@ -1,7 +1,13 @@
 #Pogoplug Bluetooth Speaker
 
-Setup Pogoplug to receive and play audio stream over Bluetooth from device such as smartphone. Galaxy S5 is used a s music source in this project.
+Setup Pogoplug to receive and play audio stream over Bluetooth from device such as smartphone. Galaxy S5 is used as a music source in this project.
 
+#Hardware Requirements
+
+* Pogoplug Pink with Arch Linux (Linux 4.4.6-1-ARCH #1 PREEMPT Fri Mar 25 23:54:20 MDT 2016 armv5tel)
+* Audio USB dongle (CMedia CM119 tested)
+* Bluetooth USB dongle (Random low cost Bluetooth dongle tested)
+ 
 #Installation
 
 ##Assumption
