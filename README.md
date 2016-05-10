@@ -8,7 +8,8 @@ Setup Pogoplug to receive and play audio stream over Bluetooth from device such 
 * Audio USB dongle (CMedia CM119 tested)
 * Bluetooth USB dongle (Random low cost Bluetooth dongle tested)
 * Stereo PC Speaker
- 
+* Music source (Any smartphone with bluetooth would work fine)
+
 #Installation
 
 ##Assumption
