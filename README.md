@@ -4,9 +4,10 @@ Setup Pogoplug to receive and play audio stream over Bluetooth from device such 
 
 #Hardware Requirements
 
-* Pogoplug Pink with Arch Linux (Linux 4.4.6-1-ARCH #1 PREEMPT Fri Mar 25 23:54:20 MDT 2016 armv5tel)
+* Pogoplug Pink with Arch Linux (Linux 4.4.6-1-ARCH #1 PREEMPT armv5tel)
 * Audio USB dongle (CMedia CM119 tested)
 * Bluetooth USB dongle (Random low cost Bluetooth dongle tested)
+* Stereo PC Speaker
  
 #Installation
 
