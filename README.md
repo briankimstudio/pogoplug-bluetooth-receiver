@@ -108,7 +108,7 @@ Controller 00:11:67:12:34:56
 	UUID: Audio Sink                (0000110b-0000-1000-8000-00805f9b34fb)
 ...
 ```
-* If 'Audio Sink' doesn't show up, then, check [pulseaudio](pulse) configuration again
+* If 'Audio Sink' doesn't show up, then, check [pulseaudio](pulse-in-markdown) configuration again
 
 ###Auto start Bluetooth USB on reboot
 
