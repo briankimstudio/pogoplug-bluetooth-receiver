@@ -65,8 +65,9 @@ Install systemd service file
 ```
 # systemctl enable pulseaudio
 # systemctl start pulseaudio
-# systemctl status pulseaudio
+# systemctl status pulseaudio # Make sure pulseaudio service is running without any error message
 ```
+
 
 ##Bluetooth USB dongle
 
@@ -94,6 +95,17 @@ Install systemd service file
 [bluetooth]# pairable on
 [bluetooth]# trust [dev]
 ```
+
+###Verifying a2dp is properly configured
+
+```
+[bluetooth]# show
+Controller 00:11:67:12:34:56
+...
+	UUID: Audio Sink                (0000110b-0000-1000-8000-00805f9b34fb)
+...
+```
+* If 'Audio Sink' doesn't show up, then, check pulseaudio configuration again
 
 ###Auto start Bluetooth USB on reboot
 
