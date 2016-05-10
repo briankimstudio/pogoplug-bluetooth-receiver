@@ -17,14 +17,14 @@ Bus 001 Device 003: ID 1131:1001 Integrated System Solution Corp. KY-BT100 Bluet
 
 ##Audio USB dongle
 
-###As root
+####As root
 
 ```
 pacman -Syu alsa-utils alsa-lib
 gpasswd -a blue audio
 ```
 
-###As blue
+####As blue
 
 ```
 <Log out, then log back in again after gpasswd command>
@@ -32,7 +32,7 @@ alsamixer # set the volume to max
 speaker-test # You should hear sound!
 ```
 
-###As root
+####As root
 
 ```
 pacman -Syu pulseaudio pulseaudio-alsa pulseaudio-bluetooth
@@ -70,7 +70,7 @@ systemctl status pulseaudio
 
 ##Bluetooth USB dongle
 
-###As root
+####As root
 
 ```
 pacman -Syu bluez bluez-libs bluez-utils
