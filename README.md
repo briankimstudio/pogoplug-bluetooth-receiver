@@ -40,7 +40,7 @@ $ speaker-test # You should hear sound!
 # gpasswd -a pulse audio
 ```
 
-Create system file for pulseaudio
+Create systemd service file for pulseaudio
 
 ```
 /etc/systemd/system/pulseaudio.service
@@ -60,7 +60,7 @@ LimitMEMLOCK=40000
 WantedBy=multi-user.target
 ```
 
-Install system file
+Install systemd service file
 
 ```
 # systemctl enable pulseaudio
