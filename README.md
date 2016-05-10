@@ -124,6 +124,10 @@ ACTION=="add", KERNEL=="hci0", RUN+="/usr/bin/hciconfig hci0 up"
  
 ![High CPU LOAD](/cpu-load.png?raw=true "High CPU Load")
 
+* iPhone issues(iPhone 4, iOS 6.0.1)
+ * iPhone can't discover Pogoplug, therefore, pairing process should be initiated from Pogoplug.
+ * iPhone can't control volume. Galaxy S5 has no problem.
+
 #References
 
 * https://wiki.archlinux.org/index.php/Bluetooth
